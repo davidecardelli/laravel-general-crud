@@ -104,7 +104,7 @@
 
 <div class="d-flex justify-content-between">
     <div>
-        <a href="{{ route('cards.show', $card->id) }}" class="btn btn-secondary mt-3">Back</a>
+        <a href="{{ route('cards.index') }}" class="btn btn-secondary mt-3">Back</a>
     </div>
     <div class="mb-3">
         <button class="btn btn-small btn-success" type="submit">Submit</button>
