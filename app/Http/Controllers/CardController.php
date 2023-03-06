@@ -21,7 +21,8 @@ class CardController extends Controller
      */
     public function create()
     {
-        //
+        $card = new Card();
+        return view('cards.create', compact('card'));
     }
 
     /**
@@ -29,7 +30,11 @@ class CardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $card = new Card();
+        $card->fill($data);
+        $card->save();
+        return to_route('cards.show', $card->id);
     }
 
     /**
@@ -44,17 +49,19 @@ class CardController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Card $card)
     {
-        //
+        return view('cards.edit', compact('card'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Card $card)
     {
-        //
+        $data = $request->all();
+        $card->update($data);
+        return to_route('cards.show', $card->id);
     }
 
     /**

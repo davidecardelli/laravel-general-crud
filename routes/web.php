@@ -19,3 +19,15 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('cards', CardController::class);
+
+Route::get('/about_us', function () {
+    return view('about_us');
+})->name('about_us');
+
+Route::get('/contact_us', function () {
+    return view('contact_us');
+})->name('contact_us');
+
+Route::get('/privacy_policy', function () {
+    return view('privacy_policy');
+})->name('privacy_policy');

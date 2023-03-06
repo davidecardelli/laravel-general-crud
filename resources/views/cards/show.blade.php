@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="card-detail-container flex-column">
+    <div class="card-detail-container">
         <div class="magic-card mx-auto">
             <div class="nametype-card d-flex justify-content-between align-items-center p-3">
                 <h3>{{ $card->nome_carta }}</h3>
@@ -11,10 +11,10 @@
                 </div>
             </div>
             <div class="character-pic">
-                <img class="img-fluid" src="{{ $card->figura }}" alt="{{ $card->nome_carta }}">
+                <img class="" src="{{ $card->figura }}" alt="{{ $card->nome_carta }}">
             </div>
             <div class="nametype-card d-flex justify-content-between align-items-center p-3">
-                <h3></h3>
+                <h3>{{ $card->tipo_carta }}</h3>
                 <div class="d-flex ">
                     <div class="mana-value me-2">{{ $card->edizione }}</div>
                 </div>
@@ -27,7 +27,7 @@
             <div class="px-3 d-flex justify-content-end footer-card">
                 <p class="value-strenght me-2">{{ $card->forza }}</p>
                 <span class="me-2">/</span>
-                <p class="value-endurance">{{ $card->costituzione }}</p>
+                <p class="value-endurance">{{ $card->forza }}</p>
             </div>
         </div>
 

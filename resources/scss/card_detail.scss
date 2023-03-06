@@ -1,21 +1,34 @@
 .card-detail-container>* {
     padding: 10px;
+
 }
 
 .magic-card {
-    background-color: red;
+
     height: 600px;
     width: 450px;
 
     .nametype-card {
         height: 50px;
         width: 100%;
-        background: green;
+
+    }
+
+    .card-info {
+        height: 200px;
     }
 
     .character-pic {
         height: 250px;
-        background: yellow;
+        width: 100%;
+
+
+        img {
+            width: 430px;
+            height: 250px;
+            object-fit: cover;
+            object-position: top;
+        }
     }
 
     .footer-card {
