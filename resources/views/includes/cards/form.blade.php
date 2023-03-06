@@ -50,10 +50,20 @@
         {{-- Tipo Carta --}}
         <div class="mb-3">
             <label for="tipo_carta" class="form-label">Tipo Carta</label>
-            <input type="text" class="form-control" id="tipo_carta" name="tipo_carta" placeholder="Tipo Carta"
-                value="{{ old('tipo_carta', $card->tipo_carta) }}">
+            <select class="form-control" id="tipo_carta" name="tipo_carta">
+                <option value="">-</option>
+                <option value="Artefatto" @if (old('tipo_carta', $card->tipo_carta) === 'Artefatto') selected @endif>Artefatto</option>
+                <option value="Creatura" @if (old('tipo_carta', $card->tipo_carta) === 'Creatura') selected @endif>Creatura</option>
+                <option value="Incantesimo" @if (old('tipo_carta', $card->tipo_carta) === 'Incantesimo') selected @endif>Incantesimo</option>
+                <option value="Istantaneo" @if (old('tipo_carta', $card->tipo_carta) === 'Istantaneo') selected @endif>Istantaneo</option>
+                <option value="Terra" @if (old('tipo_carta', $card->tipo_carta) === 'Terra') selected @endif>Terra</option>
+                <option value="Piano" @if (old('tipo_carta', $card->tipo_carta) === 'Piano') selected @endif>Piano</option>
+                <option value="Intrigo" @if (old('tipo_carta', $card->tipo_carta) === 'Intrigo') selected @endif>Intrigo</option>
+                <option value="Stregoneria" @if (old('tipo_carta', $card->tipo_carta) === 'Stregoneria') selected @endif>Stregoneria</option>
+            </select>
         </div>
     </div>
+
     <div class="col">
         {{-- Edizione --}}
         <div class="mb-3">
@@ -85,8 +95,8 @@
         {{-- Costituzione --}}
         <div class="mb-3">
             <label for="costituzione" class="form-label">Costituzione</label>
-            <input type="url" class="form-control" id="costituzione" name="costituzione" placeholder="Costituzione"
-                value="{{ old('costituzione', $card->costituzione) }}">
+            <input type="url" class="form-control" id="costituzione" name="costituzione"
+                placeholder="Costituzione" value="{{ old('costituzione', $card->costituzione) }}">
         </div>
     </div>
 </div>
