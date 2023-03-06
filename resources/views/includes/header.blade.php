@@ -7,7 +7,7 @@
                         class="img-fluid" alt="Logo Magic" style="height:50px">
                 </a>
 
-                <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler p-2 bg-white" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon color-white"></span>
