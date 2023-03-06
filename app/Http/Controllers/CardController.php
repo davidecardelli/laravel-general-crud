@@ -69,6 +69,8 @@ class CardController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Card::destroy($id);
+
+        return to_route('cards.index')->with('delete', 'tool eliminato con successo');
     }
 }
