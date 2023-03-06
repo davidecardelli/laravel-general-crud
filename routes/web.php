@@ -15,7 +15,7 @@ use App\Http\Controllers\CardController;
 */
 
 Route::get('/', function () {
-    return view('home')->name('home');
-});
+    return view('home');
+})->name('home');
 
 Route::resource('cards', CardController::class);
